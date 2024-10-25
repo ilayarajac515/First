@@ -1,15 +1,12 @@
 name: cron-tab
 
 on: 
-  push:
-    branches:
-     -  main
   schedule:
     -  cron: "* * * * *"
     
 jobs:  
   startup:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       -  name: hi
