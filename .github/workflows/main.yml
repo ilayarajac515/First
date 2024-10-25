@@ -1,0 +1,17 @@
+name: start with gibhubactions
+on:
+  push:
+    branches: 
+      -  main
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+
+    steps:
+      -  name: checkout code
+         uses: actions/checkout@v2
+
+      -  name: install dependencies
+         run: |
+           npm install
+           npm test
