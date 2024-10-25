@@ -1,0 +1,20 @@
+name: cron-tab
+
+on: 
+  push:
+    branches:
+     -  main
+  schedule:
+    -  cron: "* * * * *"
+    
+jobs:  
+  startup:
+    runs-on: ubuntu
+
+    steps:
+      -  name: hi
+         run: echo "thampi sundar inga vaa paa"
+       
+  
+  
+    
