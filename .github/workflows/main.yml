@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'open-jdk' # or 'adopt' or 'zulu'
+          distribution: 'adopt' # or 'adopt' or 'zulu'
         
       - name: Verify Java Installation
         run: java -version
