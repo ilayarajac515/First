@@ -11,8 +11,14 @@ jobs:
       -  name: checkout code
          uses: actions/checkout@v2
 
-      -  name: install dependencies
-         run: npm install
+      -  name: install java
+         run: actions/setup-java@v3
+         with:
+            java-version: '11'
+            distribution: 'open-jdk'
 
-      -  name: run tests
-         run: npm tests
+      -  name: verify java
+         run: java --version
+
+      -  name: mvn install
+         run: mvn install
